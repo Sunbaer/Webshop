@@ -1,5 +1,5 @@
 <?php 
-setcookie("account","user",time()-(86400*30),"/");
+setcookie("account","user",time()-(86400*30),"/PhpProject");
 ?>
 
 <!DOCTYPE html>
