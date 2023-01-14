@@ -77,7 +77,7 @@ if(!$connection){
 
             } echo "<p>Kategorie:<strong id='kategorie'>".$ame."</strong></p>";  
               $ame="";  
-        echo "<form action='details.php' method='post'>";
+            echo "<form action='details.php' method='post'>";
             echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
             echo "<input value='Jetz genauere Details' class='btn btn-primary' type='Submit'>";
             echo "</form>";

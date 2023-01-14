@@ -109,6 +109,7 @@ $gesamtBewertung=$bewertungen/$i;
          echo "</form>";
          echo "<form action='sortKommends.php' method='post'>";
          echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+         echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
          echo " Filter nach: <input value='Datum aufsteigend  ' name='datum' class='btn btn-primary' type='Submit'></input> 
          <input value='Bewertung absteigend' name='bewertung1' class='btn btn-primary' type='Submit'></p>";
          echo "</form><br>";
@@ -131,6 +132,7 @@ $gesamtBewertung=$bewertungen/$i;
          echo "</form>";
          echo "<form action='sortKommends.php' method='post'>";
          echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+         echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
          echo " Filter nach: <input value='Datum aufsteigend  ' name='datum' class='btn btn-primary' type='Submit'></input> 
          <input value='Bewertung aufsteigend' name='bewertung' class='btn btn-primary' type='Submit'></p>";
          echo "</form><br>";
@@ -153,6 +155,7 @@ $gesamtBewertung=$bewertungen/$i;
          echo "</form>";
          echo "<form action='sortKommends.php' method='post'>";
          echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+         echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
          echo " Filter nach: <input value='Datum absteigend' name='datum1' class='btn btn-primary' type='Submit'></input> 
          <input value='Bewertung aufsteigend' name='bewertung' class='btn btn-primary' type='Submit'></p>";
          echo "</form><br>";
@@ -177,6 +180,7 @@ $gesamtBewertung=$bewertungen/$i;
          echo "</form>";
          echo "<form action='sortKommends.php' method='post'>";
          echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+         echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
          echo " Filter nach: <input value='Datum aufsteigend' name='datum' class='btn btn-primary' type='Submit'></input> 
          <input value='Bewertung aufsteigend' name='bewertung' class='btn btn-primary' type='Submit'></p>";
          echo "</form><br>";
