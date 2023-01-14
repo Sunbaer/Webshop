@@ -31,7 +31,7 @@
               xmlhttp.open("GET", "gethint.php?q="+str, true);
               xmlhttp.send();
       }
-   
+    
   </script>
 </head>
 <body>
