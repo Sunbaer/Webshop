@@ -47,7 +47,7 @@ if ($selected_radio ==1)
 {
     $sqlB = "INSERT INTO Kommentare (produktId,kommentar,userName,gekauft,datum,bewertung) VALUES  ("."'".$id."'".","."'".$kommentar."'".","."'".$usern."'".","."'".$i."'".","."'".date('Y-m-d')."'".","."'".$selected_radio."'".")";
     $resultB = mysqli_query($connection,$sqlB);
-    header("Location: http://localhost/PhpProject/index.php", true, 301);
+    header("Location: https://martin-usta-md.me/", true, 301);
 }
 
 elseif ($selected_radio ==2) 
@@ -55,25 +55,25 @@ elseif ($selected_radio ==2)
     
     $sqlB = "INSERT INTO Kommentare (produktId,kommentar,userName,gekauft,datum,bewertung) VALUES  ("."'".$id."'".","."'".$kommentar."'".","."'".$usern."'".","."'".$i."'".","."'".date('Y-m-d')."'".","."'".$selected_radio."'".")";
     $resultB = mysqli_query($connection,$sqlB);
-    header("Location: http://localhost/PhpProject/index.php", true, 301);
+    header("Location: https://martin-usta-md.me/", true, 301);
 }
 elseif ($selected_radio ==3) 
 {
     $sqlB = "INSERT INTO Kommentare (produktId,kommentar,userName,gekauft,datum,bewertung) VALUES  ("."'".$id."'".","."'".$kommentar."'".","."'".$usern."'".","."'".$i."'".","."'".date('Y-m-d')."'".","."'".$selected_radio."'".")";
     $resultB = mysqli_query($connection,$sqlB);
-    header("Location: http://localhost/PhpProject/index.php", true, 301);
+    header("Location: https://martin-usta-md.me/", true, 301);
 }
 elseif ($selected_radio ==4) 
 {
     $sqlB = "INSERT INTO Kommentare (produktId,kommentar,userName,gekauft,datum,bewertung) VALUES  ("."'".$id."'".","."'".$kommentar."'".","."'".$usern."'".","."'".$i."'".","."'".date('Y-m-d')."'".","."'".$selected_radio."'".")";
     $resultB = mysqli_query($connection,$sqlB);
-    header("Location: http://localhost/PhpProject/index.php", true, 301);
+    header("Location: https://martin-usta-md.me/", true, 301);
 }
 elseif ($selected_radio ==5) 
 {
     $sqlB = "INSERT INTO Kommentare (produktId,kommentar,userName,gekauft,datum,bewertung) VALUES  ("."'".$id."'".","."'".$kommentar."'".","."'".$usern."'".","."'".$i."'".","."'".date('Y-m-d')."'".","."'".$selected_radio."'".")";
     $resultB = mysqli_query($connection,$sqlB);
-    header("Location: http://localhost/PhpProject/index.php", true, 301);
+    header("Location: https://martin-usta-md.me/", true, 301);
 }
 
 

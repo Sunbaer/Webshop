@@ -25,11 +25,11 @@ if(!$connection)
    if($passw == $pw){
         if($isAdmin==1){
             setcookie("account","admin".",".$usern,time()+(86400*30));  
-        header("Location: http://localhost/PhpProject/index.php", true, 301);
+        header("Location: https://martin-usta-md.me/", true, 301);
         }
         else{
             setcookie("account","user".",".$usern,time()+(86400*30));  
-        header("Location: http://localhost/PhpProject/index.php", true, 301);
+        header("Location: https://martin-usta-md.me/", true, 301);
         }
     exit();
     }
