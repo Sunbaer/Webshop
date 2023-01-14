@@ -48,7 +48,7 @@ if(!$connection){
     }   
     header("Location: http://localhost/PhpProject/Produkt.php", true, 301);
 }
-else{
+else{ 
             
             //changing the variable with B because B for Bilder
             $sqlB = "Select * FROM Produkt";
