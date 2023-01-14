@@ -35,7 +35,10 @@
   </script>
 </head>
 <body>
-    
+  <header>
+    <?php include 'header.php'?>
+  </header>
+      
     <main>
       <div class="row container-fluid" >
         <?php include 'cards.php';?>
