@@ -3,7 +3,7 @@ if(isset($_COOKIE["account"])){
     $pieces = explode(",", $_COOKIE["account"]);
     $status = $pieces[0];
     $usern = $pieces[1];
-}
+} 
 if (!isset($_COOKIE["account"]))
 {
 echo "<header>";
