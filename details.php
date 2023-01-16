@@ -74,41 +74,41 @@ if(!$connection)
   echo "<div class ='container'>";
   echo "<div class ='row justify-content-md-center'>";
   echo " <div class ='col-lg-1' '> ";
-  if(!$Bilder[0]==NULL | empty($Bilder[0]) ){
+  if(!$Bilder[0]==NULL | $Bilder[0]==" " ){
 echo " <div class ='row' >";
   echo " <img src='".$Bilder[0]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'>";
   echo "</div>";
   }
   
-  if(!$Bilder[1]==NULL |empty( $Bilder[1])){
+  if(!$Bilder[1]==NULL | $Bilder[1]==" "){
     echo "<div class ='row'>";
   echo "<img src='".$Bilder[1]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo " </div>";
   }
   
-  if(!$Bilder[2]==NULL | empty( $Bilder[2])){
+  if(!$Bilder[2]==NULL | $Bilder[2]==" "){
      echo "  <div class ='row'>";  
   echo "<img src='".$Bilder[2]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
   }
  
-  if(!$Bilder[3]==NULL | empty( $Bilder[3])){
+  if(!$Bilder[3]==NULL | $Bilder[3]==" "){
      echo " <div class ='row'>";
   echo "<img src='".$Bilder[3]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
   }
  
-  if(!$Bilder[4]==NULL | empty( $Bilder[4])){
+  if(!$Bilder[4]==NULL | $Bilder[4]==" "){
    echo "<div class ='row'>";
   echo " <img src='".$Bilder[4]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>"; 
   }
   
-  if(!$Bilder[5]==NULL | empty( $Bilder[5])){
+  if(!$Bilder[5]==NULL | $Bilder[5]==" "){
     
   }
   echo "</div>";
-  if(!$Bilder[0]==NULL |empty( $Bilder[0])){
+  if(!$Bilder[0]==NULL | $Bilder[0]==" "){
     echo " <div class ='col-lg-5' '>";
   echo "<img src='".$Bilder[0]."' style='height: 750px; width:500px; padding-top: 20px; padding-bottom: 20px;' >";
   echo "</div>";
