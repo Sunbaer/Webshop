@@ -3,7 +3,7 @@ $servername="db";
 $username="root";
 $password="example";
 $dbname = "Webshop";
-$pId=$_POST['ids'];
+$kId=$_POST['kids'];
 
 $connection = mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
