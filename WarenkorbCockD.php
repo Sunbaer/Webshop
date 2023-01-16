@@ -10,5 +10,5 @@ if(isset($_COOKIE["warenkorb"])){
 
 setcookie("warenkorb",$warenkorb,time()+(86400*30)); 
 }
-header("Location: http://localhost/PhpProject/index.php", true, 301);
+header("Location: https://martin-usta-md.me", true, 301);
 ?>

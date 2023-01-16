@@ -25,5 +25,5 @@ if(!$connection){
 
     $sql ="DELETE FROM Bilder WHERE produktId=".$idA; 
     $result = mysqli_query($connection,$sql);
-    header("Location: http://localhost/PhpProject/Produkt.php", true, 301);
+    header("Location: https://martin-usta-md.me/Produkt.phpS", true, 301);
 ?>

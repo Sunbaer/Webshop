@@ -13,5 +13,5 @@ if(!$connection){
     $result = mysqli_query($connection,$sql);
 
  
-    header("Location: http://localhost/PhpProject/Kategorie.php", true, 301);
+    header("Location: https://martin-usta-md.me/Kategorie.php", true, 301);
 ?>

@@ -45,25 +45,26 @@ if(!$connection){
             $name=$row['name'];
             $beschreibung=$row['beschreibung'];
 
-            echo"<div class='container'>";
-            echo"<div class='row '>";              
-                echo"<div class='col-lg-1' style='border: 1px solid red;'>";
+            echo"<div class='container '>";
+            echo"<div class='row text-white bg-primary '>";              
+                echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                     echo "<form action='KategorieBearbeiten.php' method='post'>";                  
-                    echo "<label>Produkt ID</label>";
-                    echo"<input type='number' size='5' style=' width:4em; border:1px solid red;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
+                    echo "<label>Kategorie ID</label>";
+                    echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
                 echo"</div>";
-                 echo"<div class='col-lg-4' style='border: 1px solid red;'>";
-                 echo "<label>Produkt Name</label>";
+                 echo"<div class='col-lg-4' style='border: 1px solid white;'>";
+                 echo "<label>Kategorie Name</label>";
                  echo "</br>";
-                 echo"<input type='text'size='20'style='border:red 2px solid;' readonly='readonly' value='".$name."' id='name' name='name'></input>";
+                 echo"<input type='text'size='20'style='border:white 2px solid;' readonly='readonly' value='".$name."' id='name' name='name'></input>";
                  echo "<input type='submit' value='bearbeiten'>";
                 echo "<input type='submit' formaction='KategorieDelete.php' value='Löschen'>";
                 echo"</div>";
                 echo"</div>"; echo"<div class='row'>";
-                     echo"<div class='col-lg-2' style='border: 1px solid red;'>";
-                     echo "<label>Produkt Beschreibung</label>";
+                     echo"<div class='col-lg-2 text-white bg-primary' style='border: 1px solid white;'>";
+                     echo "<label>Kategorie Beschreibung</label>";
                      echo "</br>";
-                     echo"<textarea style='border: 1px solid red;' id='beschreibung' name='beschreibung' readonly='readonly'>".$beschreibung."</textarea>";
+                     echo"<textarea style='border: 1px solid white;' id='beschreibung' name='beschreibung' readonly='readonly'>".$beschreibung."</textarea>";
+                     echo "<p></p>";
                      echo"</div>"; 
                     echo "</form>";
                

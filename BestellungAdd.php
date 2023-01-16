@@ -32,7 +32,7 @@ $zahlung =$_POST['zahlung'];
 
             $sql = "INSERT INTO Bestellung (userId,name,lieferAddresse,preis,zahlungsart,Produkte) VALUES  ("."'".$id."'".","."'".$vn." ".$nn."'".","."'".$adress." ".$plz."'".","."'".$preis."'".","."'".$zahlung."'".","."'".$wareAll."') ";
             $result = mysqli_query($connection,$sql);
-            header("Location: http://localhost/PhpProject/index.php", true, 301);
+            header("Location: https://martin-usta-md.me", true, 301);
            
-            setcookie("warenkorb",$last,time()-(86400*30),"/PhpProject");          
+            setcookie("warenkorb",$last,time()-(86400*30),"/");          
 ?>

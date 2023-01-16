@@ -36,31 +36,33 @@ if(!$connection){
             echo"<script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'></script>";
             echo"<script nomodule src='https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js'></script>";
             echo"<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>";
-echo"<script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>";
-echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>";
+            echo"<script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>";
+            echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>";
             echo "</head>";
              
                      
             echo"<div class='container'>";
-            echo"<div class='row '>";              
-                echo"<div class='col-lg-1' style='border: 1px solid red;'>";
+            echo"<div class='row text-white bg-primary'>";              
+                echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                     echo "<form action='KategorieUpdate.php' method='post'>";                  
                     echo "<label>Produkt ID</label>";
-                    echo"<input type='number' size='5' style=' width:4em; border:1px solid red;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
+                    echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
                 echo"</div>";
-                 echo"<div class='col-lg-4' style='border: 1px solid green;'>";
+                 echo"<div class='col-lg-4' style='border: 1px solid white;'>";
                  echo "<label>Produkt Name</label>";
                  echo "</br>";
-                 echo"<input type='text'size='20'style='border:green 2px solid;'  value='".$name."' id='name' name='name'></input>";
+                 echo"<input type='text'size='20'style='border:white 2px solid;'  value='".$name."' id='name' name='name'></input>";
                  echo "<input type='submit' value='bestätigen'>";
                 echo "<input type='submit' formaction='Kategorie.php' value='Zurück'>";
                 echo"</div>";
                 echo"</div>"; echo"<div class='row'>";
-                     echo"<div class='col-lg-2' style='border: 1px solid green;'>";
+                     echo"<div class='col-lg-2 text-white bg-primary' style='border: 1px solid white;'>";
                      echo "<label>Produkt Beschreibung</label>";
                      echo "</br>";
-                     echo"<textarea style='border: 1px solid green;' id='beschreibung' name='beschreibung' >".$beschreibung."</textarea>";
+                     echo"<textarea style='border: 1px solid white;' id='beschreibung' name='beschreibung' >".$beschreibung."</textarea>";
+                     echo "<p></p>";
                      echo"</div>"; 
+                 
                     echo "</form>";
                       
                             echo "</form>";
@@ -84,7 +86,7 @@ echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap
                 {
                 
                 echo "<div class='row'>";
-                echo "<div class='col-lg-1' style='border: 1px solid purple;'> ";
+                echo "<div class='col-lg-1 ' style='border: 1px solid purple;'> ";
                 echo $row['id'];
                 echo "</div>";
                 echo "<div class='col-lg-1' style='border: 1px solid purple;'> ";
@@ -115,25 +117,27 @@ echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap
          
                  
         echo"<div class='container'>";
-        echo"<div class='row '>";              
-            echo"<div class='col-lg-1' style='border: 1px solid red;'>";
+        echo"<div class='row text-white bg-primary'>";              
+            echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                 echo "<form action='KategorieUpdate.php' method='post'>";                  
                 echo "<label>Produkt ID</label>";
-                echo"<input type='number' size='5' style=' width:4em; border:1px solid red;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
+                echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
             echo"</div>";
-             echo"<div class='col-lg-4' style='border: 1px solid red;'>";
+             echo"<div class='col-lg-4' style='border: 1px solid white;'>";
              echo "<label>Produkt Name</label>";
              echo "</br>";
-             echo"<input type='text'size='20'style='border:green 2px solid;' value='".$name."' id='name' name='name'></input>";
+             echo"<input type='text'size='20'style='border:white 2px solid;' value='".$name."' id='name' name='name'></input>";
              echo "<input type='submit' value='bestätigen'>";
             echo "<input type='submit' formaction='Kategorie.php' value='Zurück'>";
             echo"</div>";
-            echo"</div>"; echo"<div class='row'>";
-                 echo"<div class='col-lg-2' style='border: 1px solid red;'>";
+            echo"</div>"; echo"<div class='row text-white bg-primary'>";
+                 echo"<div class='col-lg-2' style='border: 1px solid white;'>";
                  echo "<label>Produkt Beschreibung</label>";
                  echo "</br>";
-                 echo"<textarea style='border: 1px solid green;' id='beschreibung' name='beschreibung'>".$beschreibung."</textarea>";
+                 echo"<textarea style='border: 1px solid white;' id='beschreibung' name='beschreibung'>".$beschreibung."</textarea>";
+                  echo "<p></p>";
                  echo"</div>"; 
+                 
                 echo "</form>";
                   
                         echo "</form>";
