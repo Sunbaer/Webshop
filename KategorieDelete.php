@@ -9,7 +9,7 @@ $connection = mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
     die("connection failed: ".mysqli_connect_error());
     }
-    $sql ="DELETE FROM Kategorie WHERE id=".$pId; 
+    $sql ="DELETE FROM Kategorie WHERE id=".$kId; 
     $result = mysqli_query($connection,$sql);
 
  
