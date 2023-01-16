@@ -5,7 +5,7 @@ $password="example";
 $dbname = "Webshop";
 include 'header.php';
 echo "<br>";
-$pId=$_POST['kids'];
+$kId=$_POST['kids'];
 $connection = mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
     die("connection failed: ".mysqli_connect_error());
@@ -121,7 +121,7 @@ if(!$connection){
             echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                 echo "<form action='KategorieUpdate.php' method='post'>";                  
                 echo "<label>Produkt ID</label>";
-                echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
+                echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$kId."' id='ids' name='ids'></input>";
             echo"</div>";
              echo"<div class='col-lg-4' style='border: 1px solid white;'>";
              echo "<label>Produkt Name</label>";
