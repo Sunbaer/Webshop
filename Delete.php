@@ -20,7 +20,7 @@ if(!$connection){
                 { 
                  $idA =$row['id']; 
                 }
-                $idA++;
+               
             }
 
     $sql ="DELETE FROM Bilder WHERE produktId=".$idA; 
