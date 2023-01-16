@@ -51,10 +51,12 @@ if(!$connection){
 else{ 
             if (!$name==NULL){
             //changing the variable with B because B for Bilder
-            $sqlB = "INSERT INTO Produkt (name,preis,kategorieId,beschreibung) VALUES  ("."'".$name."'".","."'".$preis."'".","."'".$kategorieId."'".","."'".$beschreibung."'".") ";
-            $resultB = mysqli_query($connection,$sqlB);
-            $sqlB = "Select * FROM Produkt";
+            
+           
             $connection = mysqli_connect($servername,$username,$password,$dbname);
+            $sqlB = "INSERT INTO Produkt (name,preis,kategorieId,beschreibung) VALUES  ("."'".$name."'".","."'".$preis."'".","."'".$kategorieId."'".","."'".$beschreibung."'".") ";
+            $resultB = mysqli_query($connection,$sqlB); 
+            $sqlB = "Select * FROM Produkt";
             $resultB = mysqli_query($connection,$sqlB);
             if(mysqli_num_rows($resultB)>0){
                 while($row = mysqli_fetch_assoc($resultB))
