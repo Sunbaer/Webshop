@@ -46,7 +46,7 @@ if(!$connection){
         $sql = "UPDATE Bilder SET bildSource="."'".$bild5."'"." Where produktId="."'".$pId."' AND id="."'".$bId[4]."'";
         $result = mysqli_query($connection,$sql);
     }   
-    header("Location: https://martin-usta-md.me/Produkt.php", true, 301);
+    header("Location: http://localhost/PhpProject/Produkt.php", true, 301);
 }
 else{ 
             
@@ -74,7 +74,7 @@ else{
                 $sqlB = "INSERT  INTO Bilder (produktId,bildSource) VALUES("."'".$idA."' ,'".$bild5."')"; 
                 $resultB = mysqli_query($connection,$sqlB); 
                 }
-                header("Location: https://martin-usta-md.me/Produkt.php", true, 301);
+                header("Location: http://localhost/PhpProject/Produkt.php", true, 301);
             }
        
 }
