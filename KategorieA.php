@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,10 +43,33 @@
   </header>
       
     <main>
-      <div class="row container-fluid" >
-        <?php include 'cards.php';?>
+    <div class="container" >
+      <div class="row justify-content-center" >
+      <div class='col-lg-4 ' >
+        <br>
+        <h2>Alle Kategorien</h2>
+        <br>
+        <?php 
+        $sqlB = "Select * FROM Kategorie ";     
+        $resultB = mysqli_query($connection,$sqlB);
+        if(mysqli_num_rows($resultB)>0){
+            while($row = mysqli_fetch_assoc($resultB))
+            { 
+            // saving the first Picture as view Picture
+            $name=$row['name'];
+            $id=$row['id'];
+            echo "<form action='index.php' nav-link active   method='post'>";
+            echo "<input value='".$id."' class='btn btn-primary' name='ki' type='hidden'>";
+            echo "<input  value='".$name."' name=''kname' class='btn btn-primary'  type='Submit'>";
+            echo "</form>";
+            echo "<br>";
+            }
+        }
+        
+        ?>
     </div>
-    
+    </div>
+    </div>
      <!-- </div>
           <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="glados.glb" camera-controls touch-action="pan-y"></model-viewer>
       </div> 

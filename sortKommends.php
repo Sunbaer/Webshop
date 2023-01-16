@@ -13,6 +13,9 @@ echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap
 echo"<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css'>";
 echo"<script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'></script>";
 echo"<script nomodule src='https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js'></script>";
+echo"<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>";
+echo"<script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>";
+echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>";
 
 
 echo "</head>";
@@ -86,9 +89,14 @@ $gesamtBewertung=$bewertungen/$i;
   echo "</div>";
   echo "<div class ='col-sm-3' style='border: 1px solid red;'>";
   echo "<p><strong>Beschreibung</strong><br>".$beschreibung."</p>";
-  echo "<p><strong>Preis</strong>: ".$preis."€</p>";
-  echo "<p><strong>Repzeptionen</strong>: ".$i."</p>";
-  echo "<p><strong>Gesamt Bewertung</strong>: ".$gesamtBewertung."</p>";
+  echo "<p><strong>Preis:</strong>€".$preis."</p>";
+  echo "<p><strong>Durchschnittliche Bewertung</strong><br>".$scnhittBewertung."</p>";
+  echo "<p><strong>Rezeptionen</strong><br>".$i."</p>";
+  echo "<form class ='row justify-content-md-center'  action='WarenkorbCock.php' method='post'>";
+  echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+  echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
+  echo "<input value='In den Warenkorb' class=' btn btn-primary' type='Submit'>";
+  echo "</form>";
   echo "</div>";
   echo "</div>";
   echo "<br>";

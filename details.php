@@ -14,6 +14,9 @@ echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap
 echo"<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css'>";
 echo"<script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'></script>";
 echo"<script nomodule src='https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js'></script>";
+echo"<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>";
+echo"<script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>";
+echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>";
 
 
 echo "</head>";
@@ -38,6 +41,8 @@ if(!$connection)
           {
            $id =$row['id'];
            $beschreibung=$row['beschreibung'];
+           $preis=$row['preis'];
+           
           }
 
         }
@@ -50,44 +55,85 @@ if(!$connection)
              $i++;
             }
           }
-
+          $i = 0;
+          $sql = "Select * FROM Kommentare Where produktId="."'".$id."'"; 
+          $result = mysqli_query($connection,$sql);
+          if(mysqli_num_rows($result)>0){
+              while($row = mysqli_fetch_assoc($result))
+              { 
+                $bewertung=$row['bewertung'];
+                $gesbewertung+=$bewertung;
+                $i++;
+              }
+            }
+  $scnhittBewertung=$gesbewertung/$i;
   echo "<body>";
   echo "<div class ='container'>";
   echo "<div class ='row justify-content-md-center'>";
-  echo " <div class ='col-lg-1' style='border: 1px solid red;'> ";
-  echo " <div class ='row'>";
+  echo " <div class ='col-lg-1' '> ";
+  if(!$Bilder[0]==NULL ){
+echo " <div class ='row' >";
   echo " <img src='".$Bilder[0]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'>";
   echo "</div>";
-  echo "<div class ='row'>";
+  }
+  
+  if(!$Bilder[1]==NULL){
+    echo "<div class ='row'>";
   echo "<img src='".$Bilder[1]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo " </div>";
-  echo "  <div class ='row'>";  
+  }
+  
+  if(!$Bilder[2]==NULL){
+     echo "  <div class ='row'>";  
   echo "<img src='".$Bilder[2]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
-  echo " <div class ='row'>";
+  }
+ 
+  if(!$Bilder[3]==NULL){
+     echo " <div class ='row'>";
   echo "<img src='".$Bilder[3]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
-  echo "<div class ='row'>";
+  }
+ 
+  if(!$Bilder[4]==NULL){
+   echo "<div class ='row'>";
   echo " <img src='".$Bilder[4]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
+  echo "</div>"; 
+  }
+  
+  if(!$Bilder[5]==NULL){
+    
+  }
   echo "</div>";
-  echo "</div>";
-  echo " <div class ='col-lg-5' style='border: 1px solid red;'>";
+  if(!$Bilder[0]==NULL){
+    echo " <div class ='col-lg-5' '>";
   echo "<img src='".$Bilder[0]."' style='height: 750px; width:500px; padding-top: 20px; padding-bottom: 20px;' >";
   echo "</div>";
-  echo "<div class ='col-sm-3' style='border: 1px solid red;'>";
-  echo "<p><strong>Beschreibung</strong><br>".$beschreibung."</p>";
-  echo "</div>";
+  }
+  
+  echo "<div class ='col-sm-4 text-white bg-primary''>";
+  echo "<p><strong >Beschreibung</strong><br>".$beschreibung."</p>";
+  echo "<p><strong>Preis:</strong>".$preis."€</p>";
+  echo "<p><strong>Durchschnittliche Bewertung</strong><br>".number_format($scnhittBewertung,1,'.','')."</p>";
+  echo "<p><strong>Rezeptionen</strong><br>".$i."</p>";
+  echo "<form class ='row justify-content-md-center'  action='WarenkorbCock.php' method='post'>";
+  echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
+  echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
+  echo "<input value='In den Warenkorb' class=' btn btn-success' type='Submit'>";
+  echo "</form>";
+  echo "</div>"; 
   echo "</div>";
   echo "<br>";
   echo "<div class ='row justify-content-md-center'>";
-  echo "<div class ='col-sm-9' style='border: 1px solid red;'>";
+  echo "<div class ='col-sm-9''>";
   echo " <p>
           <strong>Kommentarbereich</strong>
+        
           
           <br>
 </p>";
         if ($status =="user" | $status =="admin"){
-           echo "<form action='Kommentar.php' method='post'>";
+        echo "<form action='Kommentar.php' method='post'>";
         echo "<p>Kommentar Hinterlegen";
         echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
         echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
@@ -109,7 +155,7 @@ if(!$connection)
         
         if(mysqli_num_rows($result)>0){
             while($row = mysqli_fetch_assoc($result))
-            {echo "<div class ='row' style='border: 1px solid red;'>"; 
+            {echo "<div class ='row text-primary' style='border:2px solid #227bd4; --bs-text-opacity: .5; '>"; 
               $kommentar=$row['kommentar'];
               $writtenBy=$row['userName'];
               $gekauft=$row['gekauft']; 
@@ -120,6 +166,7 @@ if(!$connection)
               echo $kommentar."</p>";
               if($gekauft == 1){
               echo "<p style='color:green;'> das Produkt wurde von dem Kommentarschreiber gekauft<p>";
+              echo "<p>Bewertung: <strong style='color:blue'>".$bewertung." Sterne</strong>  </p>";
               }
               else{
                 echo "<p style='color:red;'> das Produkt wurde nicht von dem Kommentarschreiber gekauft<p>";
@@ -129,7 +176,7 @@ if(!$connection)
             echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
             echo "<input value='Liken' class='btn btn-primary' type='Submit'> </p>";
             echo "</form><br>";
-             echo "</div>";
+            echo "</div>";
              
             }  echo " </div>";
           }
