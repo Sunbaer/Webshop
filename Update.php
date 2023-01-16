@@ -49,8 +49,10 @@ if(!$connection){
     header("Location: https://martin-usta-md.me/Produkt.php", true, 301);
 }
 else{ 
-            
+            if (!$name==NULL){
             //changing the variable with B because B for Bilder
+            $sqlB = "INSERT INTO Produkt (name,preis,kategorieId,beschreibung) VALUES  ("."'".$name."'".","."'".$preis."'".","."'".$kategorieId."'".","."'".$beschreibung."'".") ";
+            $resultB = mysqli_query($connection,$sqlB);
             $sqlB = "Select * FROM Produkt";
             $connection = mysqli_connect($servername,$username,$password,$dbname);
             $resultB = mysqli_query($connection,$sqlB);
@@ -60,9 +62,8 @@ else{
                  $idA =$row['id']; 
                 }
                 $idA++;
-                if (!$name==NULL){
-                       $sqlB = "INSERT INTO Produkt (name,preis,kategorieId,beschreibung) VALUES  ("."'".$name."'".","."'".$preis."'".","."'".$kategorieId."'".","."'".$beschreibung."'".") ";
-                $resultB = mysqli_query($connection,$sqlB);
+                
+                
                 $sqlB = "INSERT  INTO Bilder (produktId,bildSource) VALUES("."'".$idA."' ,'".$bild1."')"; 
                 $resultB = mysqli_query($connection,$sqlB);
                 $sqlB = "INSERT  INTO Bilder (produktId,bildSource) VALUES("."'".$idA."' ,'".$bild2."')"; 
