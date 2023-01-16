@@ -66,7 +66,10 @@ if(!$connection)
                 $i++;
               }
             }
-  $scnhittBewertung=$gesbewertung/$i;
+  if(!$i==0){
+    $scnhittBewertung=$gesbewertung/$i;
+  }
+  
   echo "<body>";
   echo "<div class ='container'>";
   echo "<div class ='row justify-content-md-center'>";
