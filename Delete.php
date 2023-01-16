@@ -23,7 +23,7 @@ if(!$connection){
                
             }
 
-    $sql ="DELETE FROM Bilder WHERE produktId=".$idA; 
+    $sql ="DELETE FROM Bilder WHERE produktId=".$pId; 
     $result = mysqli_query($connection,$sql);
     header("Location: https://martin-usta-md.me/Produkt.php", true, 301);
 ?>
