@@ -5,7 +5,7 @@ $password="example";
 $dbname = "Webshop";
 include 'header.php';
 echo "<br>";
-$pId=$_POST['ids'];
+$pId=$_POST['kids'];
 $connection = mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
     die("connection failed: ".mysqli_connect_error());

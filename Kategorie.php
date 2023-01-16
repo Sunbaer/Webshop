@@ -50,7 +50,7 @@ if(!$connection){
                 echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                     echo "<form action='KategorieBearbeiten.php' method='post'>";                  
                     echo "<label>Kategorie ID</label>";
-                    echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='ids' name='ids'></input>";
+                    echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$id."' id='kids' name='kids'></input>";
                 echo"</div>";
                  echo"<div class='col-lg-4' style='border: 1px solid white;'>";
                  echo "<label>Kategorie Name</label>";
