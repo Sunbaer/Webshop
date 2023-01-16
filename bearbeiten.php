@@ -205,12 +205,12 @@ echo"<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap
                         echo "<form id='form' action='Update.php' method='post'>";
                         //size 5 
                         echo "<label>Produkt ID</label>";
-                        echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value=".$id." id='ids' name='ids'></input>";
+                        echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly'  id='ids' name='ids'></input>";
                     echo"</div>";
                      echo"<div class='col-lg-3' style='border: 1px solid white;'>";
                      echo "<label>Produkt Name</label>";
                      echo "</br>";
-                     echo"<input type='text'size='20'style='border:white 2px solid;'  value='".$name."' id='name' name='name'></input>";
+                     echo"<input type='text'size='20'style='border:white 2px solid;'  id='name' name='name'></input>";
                     echo"</div>";
                      echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                      echo "<label>Produkt Preis</label>";
