@@ -63,7 +63,7 @@ else{
                 { 
                  $idA =$row['id']; 
                 }
-                $idA++;
+           
                 
                 
                 $sqlB = "INSERT  INTO Bilder (produktId,bildSource) VALUES("."'".$idA."' ,'".$bild1."')"; 
