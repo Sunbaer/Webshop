@@ -51,7 +51,7 @@ if(!$connection){
                  echo"<div class='col-lg-4' style='border: 1px solid white;'>";
                  echo "<label>Produkt Name</label>";
                  echo "</br>";
-                 echo"<input type='text'size='20'style='border:white 2px solid;'  id='name' name='name'></input>";
+                 echo"<input type='text'size='20'style='border:white 2px solid;'  value='".$name."' id='name' name='name'></input>";
                  echo "<input type='submit' value='bestätigen'>";
                 echo "<input type='submit' formaction='Kategorie.php' value='Zurück'>";
                 echo"</div>";
@@ -126,7 +126,7 @@ if(!$connection){
              echo"<div class='col-lg-4' style='border: 1px solid white;'>";
              echo "<label>Produkt Name</label>";
              echo "</br>";
-             echo"<input type='text'size='20'style='border:white 2px solid;' value='".$name."' id='name' name='name'></input>";
+             echo"<input type='text'size='20'style='border:white 2px solid;'  id='name' name='name'></input>";
              echo "<input type='submit' value='bestätigen'>";
             echo "<input type='submit' formaction='Kategorie.php' value='Zurück'>";
             echo"</div>";
