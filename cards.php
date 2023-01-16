@@ -20,7 +20,7 @@ if ($Ki == NULL){
             $id = $row["id"];
             $name =$row["name"];
             $preis =$row["preis"];
-   
+            
             echo "<div  class='card col-2'style='border:2px solid #227bd4; width:17.3rem;'>";
             echo "<br>";
             $i =0;
