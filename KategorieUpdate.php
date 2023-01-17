@@ -1,4 +1,9 @@
 <?php 
+if(isset($_COOKIE["account"])){
+    $pieces = explode(",", $_COOKIE["account"]);
+    $status = $pieces[0];
+    $usern = $pieces[1];
+} 
 
 $servername="db";
 $username="root";
@@ -12,7 +17,8 @@ $bewertungAnzahl=$_POST['bewertungAnzahl'];
 $bewertung=$_POST['bewertung'];
 $beschreibung=$_POST['beschreibung'];
 $bId=array();
-if(!$pId==NULL){
+if ( $status=="admin"){
+  if(!$pId==NULL){
    $connection = mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
     die("connection failed: ".mysqli_connect_error());
@@ -45,5 +51,10 @@ else{
        header("Location: https://martin-usta-md.me/Kategorie.php", true, 301);
 }
 
-           
+        
+}
+else {
+    echo "you suck";
+}
+     
 ?>
