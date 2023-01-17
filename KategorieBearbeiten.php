@@ -120,11 +120,11 @@ if(!$connection){
         echo"<div class='row text-white bg-primary'>";              
             echo"<div class='col-lg-1' style='border: 1px solid white;'>";
                 echo "<form action='KategorieUpdate.php' method='post'>";                  
-                echo "<label>Produkt ID</label>";
+                echo "<label>ID</label>";
                 echo"<input type='number' size='5' style=' width:4em; border:1px solid white;' readonly='readonly' value='".$kId."' id='ids' name='ids'></input>";
             echo"</div>";
              echo"<div class='col-lg-4' style='border: 1px solid white;'>";
-             echo "<label>Produkt Name</label>";
+             echo "<label>Kategorie Name</label>";
              echo "</br>";
              echo"<input type='text'size='20'style='border:white 2px solid;'  id='name' name='name'></input>";
              echo "<input type='submit' value='bestätigen'>";
@@ -132,7 +132,7 @@ if(!$connection){
             echo"</div>";
             echo"</div>"; echo"<div class='row text-white bg-primary'>";
                  echo"<div class='col-lg-2' style='border: 1px solid white;'>";
-                 echo "<label>Produkt Beschreibung</label>";
+                 echo "<label>Kategoriie Beschreibung</label>";
                  echo "</br>";
                  echo"<textarea style='border: 1px solid white;' id='beschreibung' name='beschreibung'>".$beschreibung."</textarea>";
                   echo "<p></p>";
