@@ -41,7 +41,7 @@ if ($Ki == NULL){
                 echo "  <div class='card-body'>";
                 echo "  <h5 class='card-title'>".$name."</h5>";
                 echo "  <p class='card-text'>";
-                echo "  <p>Price: <strong id='price'>".$preis."€</strong></p>";
+                echo "  <p>Preis: <strong id='price'>".$preis."€</strong></p>";
             }   
             //changing the variable with Kid because Kid for kategorieId
             $sqlKid = "Select kategorieId FROM Produkt WHERE id=".$id; 
@@ -82,7 +82,7 @@ if ($Ki == NULL){
               $ame="";  
             echo "<form action='details.php' method='post'>";
             echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
-            echo "<input value='Jetz genauere Details' class='btn btn-primary' type='Submit'>";
+            echo "<input value='SDetails' class='btn btn-primary' type='Submit'>";
             echo "</form>";
             echo"</div>" ;
             echo "</div>";

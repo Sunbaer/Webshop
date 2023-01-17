@@ -60,19 +60,18 @@
                 echo "<label id='error'></label>";
                 echo "</div>";
                 echo "<div class='form-outline mb-4' >";
-                echo "<label>Ihr Vorname</label><br>";
+                echo "<label>Vorname</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='vn' name='vn' value='".$vn."'><br>";
-                echo "<label>Ihr Nachname</label><br>";
+                echo "<label>Nachname</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='nn' name='nn' value='".$nn."'><br>";
-                echo "<label>Ihr Ihre Liefer addresse</label><br>";
+                echo "<label>Lieferaddresse</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='adress' name='adress' value='".$adresse."'><br>";
-                echo "<label>Ihre Plz</label><br>";
+                echo "<label>Plz</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='plz' name='plz' value='".$plz."'><br>";
-                echo "<label>Ihr Preis in €</label><br>";
+                echo "<label>Preis in €</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='preis' readonly='readonly' name='preis' value='".$preis."'><br>";
-                echo "<label>Ihr Zahlungsart€</label><br>";
+                echo "<label>Zahlungsart</label><br>";
                 echo "<input style='border: rgb(21, 89, 167) 2px solid;' type='text' id='zahlung' name='zahlung' value='".$zahlung."'><br>";
-                
                 echo "<input value='".$wareAll."' class='btn btn-primary' name='wareAll' type='hidden'>";
                 echo "<input value='".$preis."' class='btn btn-primary' name='preis' type='hidden'>";
                 echo "<input value='".$usern."' class='btn btn-primary' name='user' type='hidden'>";

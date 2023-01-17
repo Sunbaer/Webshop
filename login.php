@@ -55,7 +55,7 @@
                 <input type="text" name="un" id="un"  class="form-control form-control-lg" style="border: 2px solid rgb(21, 89, 167);" /> 
               </div>
              <div class="form-outline mb-4">
-                <label class="form-label">Password</label>
+                <label class="form-label">Passwort</label>
                 <input type="password" name="pw" id="pw" class="form-control form-control-lg" style="border: 2px solid rgb(21, 89, 167);"  />
                 
             </div>
