@@ -67,7 +67,7 @@ $gesamtBewertung=$bewertungen/$i;
   echo "<body>";
   echo "<div class ='container'>";
   echo "<div class ='row justify-content-md-center'>";
-  echo " <div class ='col-lg-1' style='border: 1px solid red;'> ";
+ 
   echo " <div class ='col-lg-1' '> ";
   if(!$Bilder[0]==NULL | $Bilder[0]==" " ){
 echo " <div class ='row' >";
