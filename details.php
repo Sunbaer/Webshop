@@ -104,16 +104,14 @@ echo " <div class ='row' >";
   echo "</div>"; 
   }
   
-  if(!$Bilder[5]==NULL | $Bilder[5]==" "){
-    
-  }
+
   echo "</div>";
   if(!$Bilder[0]==NULL | $Bilder[0]==" "){
     echo " <div class ='col-lg-5' '>";
   echo "<img src='".$Bilder[0]."' style='height: 750px; width:500px; padding-top: 20px; padding-bottom: 20px;' >";
   echo "</div>";
   }
-  
+  echo "<p></p>";
   echo "<div class ='col-sm-4 text-white bg-primary''>";
   echo "<p><strong >Beschreibung</strong><br>".$beschreibung."</p>";
   echo "<p><strong>Preis:</strong>".$preis."€</p>";
@@ -164,9 +162,11 @@ echo " <div class ='row' >";
               $gekauft=$row['gekauft']; 
               $likes=$row['hilfreich'];          
               $datum=$row['datum'];
+              $bewertung=$row['bewertung'];
 
               echo "<p>geschrieben von <strong>".$writtenBy."</strong> am <strong>".$datum."</strong> : <br>";
               echo $kommentar."</p>";
+              echo "<p>Bewertung: <strong style='color:blue'>".$bewertung." Sterne</strong>  </p>";
               if($gekauft == 1){
               echo "<p style='color:green;'> das Produkt wurde von dem Kommentarschreiber gekauft<p>";
               echo "<p>Bewertung: <strong style='color:blue'>".$bewertung." Sterne</strong>  </p>";

@@ -68,26 +68,46 @@ $gesamtBewertung=$bewertungen/$i;
   echo "<div class ='container'>";
   echo "<div class ='row justify-content-md-center'>";
   echo " <div class ='col-lg-1' style='border: 1px solid red;'> ";
-  echo " <div class ='row'>";
+  echo " <div class ='col-lg-1' '> ";
+  if(!$Bilder[0]==NULL | $Bilder[0]==" " ){
+echo " <div class ='row' >";
   echo " <img src='".$Bilder[0]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'>";
   echo "</div>";
-  echo "<div class ='row'>";
+  }
+  
+  if(!$Bilder[1]==NULL | $Bilder[1]==" "){
+    echo "<div class ='row'>";
   echo "<img src='".$Bilder[1]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo " </div>";
-  echo "  <div class ='row'>";  
+  }
+  
+  if(!$Bilder[2]==NULL | $Bilder[2]==" "){
+     echo "  <div class ='row'>";  
   echo "<img src='".$Bilder[2]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
-  echo " <div class ='row'>";
+  }
+ 
+  if(!$Bilder[3]==NULL | $Bilder[3]==" "){
+     echo " <div class ='row'>";
   echo "<img src='".$Bilder[3]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
   echo "</div>";
-  echo "<div class ='row'>";
+  }
+ 
+  if(!$Bilder[4]==NULL | $Bilder[4]==" "){
+   echo "<div class ='row'>";
   echo " <img src='".$Bilder[4]."' style='height: 150px; width:150px; padding-top: 20px; padding-bottom: 20px;'> ";
+  echo "</div>"; 
+  }
+  
+
   echo "</div>";
-  echo "</div>";
-  echo " <div class ='col-lg-5' style='border: 1px solid red;'>";
+  if(!$Bilder[0]==NULL | $Bilder[0]==" "){
+    echo " <div class ='col-lg-5' '>";
   echo "<img src='".$Bilder[0]."' style='height: 750px; width:500px; padding-top: 20px; padding-bottom: 20px;' >";
   echo "</div>";
-  echo "<div class ='col-sm-3' style='border: 1px solid red;'>";
+  }
+  echo "<p></p>";
+  echo "<div class ='col-sm-4 text-white bg-primary''>";
   echo "<p><strong>Beschreibung</strong><br>".$beschreibung."</p>";
   echo "<p><strong>Preis:</strong>€".$preis."</p>";
   echo "<p><strong>Durchschnittliche Bewertung</strong><br>".$scnhittBewertung."</p>";
@@ -95,7 +115,7 @@ $gesamtBewertung=$bewertungen/$i;
   echo "<form class ='row justify-content-md-center'  action='WarenkorbCock.php' method='post'>";
   echo "<input value='".$name."' class='btn btn-primary' name='name' type='hidden'>";
   echo "<input value='".$id."' class='btn btn-primary' name='id' type='hidden'>";
-  echo "<input value='In den Warenkorb' class=' btn btn-primary' type='Submit'>";
+  echo "<input value='In den Warenkorb' class=' btn btn-success' type='Submit'>";
   echo "</form>";
   echo "</div>";
   echo "</div>";
@@ -205,7 +225,7 @@ $gesamtBewertung=$bewertungen/$i;
         $result = mysqli_query($connection,$sql);
          if(mysqli_num_rows($result)>0){
              while($row = mysqli_fetch_assoc($result))
-             {echo "<div class ='row' style='border: 1px solid red;'>"; 
+             {echo "<div class ='row' style='border:2px solid #227bd4;'>"; 
                $kommentar=$row['kommentar'];
                $writtenBy=$row['userName'];
                $gekauft=$row['gekauft']; 
