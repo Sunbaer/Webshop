@@ -111,7 +111,7 @@ echo " <div class ='row' >";
   echo "<img src='".$Bilder[0]."' style='height: 750px; width:500px; padding-top: 20px; padding-bottom: 20px;' >";
   echo "</div>";
   }
-  echo "<p></p>";
+
   echo "<div class ='col-sm-4 text-white bg-primary''>";
   echo "<p><strong >Beschreibung</strong><br>".$beschreibung."</p>";
   echo "<p><strong>Preis:</strong>".$preis."€</p>";
