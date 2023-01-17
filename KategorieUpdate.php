@@ -55,7 +55,7 @@ else{
 }
 else {
 
-   echo "<iframe width='942' height='530' src='https://www.youtube.com/embed/O91DT1pR1ew' title='get rickrolled lol' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
+   echo "<iframe width='942' height='530' src='https://www.youtube.com/embed/O91DT1pR1ew' title='get rickrolled lol' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>";
 }
      
 ?>
