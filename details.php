@@ -126,7 +126,7 @@ echo " <div class ='row' >";
   echo "</div>";
   echo "<br>";
   echo "<div class ='row justify-content-md-center'>";
-  echo "<div class ='col-sm-9''>";
+  echo "<div class ='col-sm-9' style='border:2px solid #227bd4;'>";
   echo " <p>
           <strong>Kommentarbereich</strong>
         
